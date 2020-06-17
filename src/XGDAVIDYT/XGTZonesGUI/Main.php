@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace XGDAVIDYT\XGTHelpOP;
+namespace XGDAVIDYT\XGTZonesGUI;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
