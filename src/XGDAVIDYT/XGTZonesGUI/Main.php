@@ -66,12 +66,12 @@ class Main extends PluginBase implements Listener{
 					$menu->setListener(function(Player $player, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action) : void{
 					if($itemClicked->getId() === ItemIds::GOLDEN_APPLE){
 						$player->removeWindow($action->getInventory());
-						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l »§r§7 ".$mgapple);
+						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l »§r§7 ".$this->config->get("Message-GoldenAplle"););
 						$player->teleport(new Vector3($this->config->get("GAplle-X"), $this->config->get("GAplle-Y"), $this->config->get("GAplle-Z")));
 					}
 					if($itemClicked->getId() === ItemIds::CHEST){
 						$player->removeWindow($action->getInventory());
-						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l »§r§7 ".$mchest);
+						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l »§r§7 {$mchest}");
 						$player->teleport(new Vector3($this->config->get("Chest-X"), $this->config->get("Chest-Y"), $this->config->get("Chest-Z")));
 					}
 					if($itemClicked->getId() === ItemIds::MELON){
