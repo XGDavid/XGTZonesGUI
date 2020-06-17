@@ -8,6 +8,8 @@ Open a GUI and choose where you want to teleport.
 
 This plugin is in BETA!
 
+Don't use commands in CONSOLE!
+
 ## How to install
 
 1. Install plugin
