@@ -20,6 +20,7 @@ Name-Locked: "§cLOCKED"
 # Message:
 # Here you put a personalized message when someone clicks on that item
 # (optional)Use for Color = §
+# NEXT UPDATE!
 Message-Chest: "Teleport to Crate Zone!"
 Message-Melon: "Teleport to Farm Zone!"
 Message-GoldenApple: "Teleport to Spawn Zone!"
