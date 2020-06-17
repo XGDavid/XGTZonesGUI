@@ -1,6 +1,4 @@
 #XGTZonesGUI
-version: "1.0.0-beta1"
-#DON'T EDIT
 
 # Type:
  # 1 = This type has 4 slots that you can select
@@ -16,6 +14,7 @@ Name-Sword: "PVP"
 Name-Egg: "Food Shop"
 Name-Stone: "Mine"
 Name-Sand: "Shop"
+Name-Locked: "§cLOCKED"
 
 # Message:
 # Here you put a personalized message when someone clicks on that item
