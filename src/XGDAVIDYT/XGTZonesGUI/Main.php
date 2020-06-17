@@ -50,8 +50,9 @@ class Main extends PluginBase implements Listener{
 		$msand = $this->getConfig()->get("Message-Sand");
 		$locked = $this->getConfig()->get("Name-Locked");
 
-		if($command->getName() === "zones"){
-			if($sender instanceof Player){//
+		switch($command->getName()){
+			case "zones":
+			if($sender instanceof Player){
 			$player->sendMessage("s");
 				$menu = InvMenu::create(InvMenu::TYPE_CHEST);
 				$inventory = $menu->getInventory();
@@ -176,7 +177,10 @@ class Main extends PluginBase implements Listener{
 			}else{//
 				$player->sendMessage("[XGTZonesGUI] > Command only In-Game!");
 			}
+		
+			return true;
+		default:
+			return false;
 		}
-        return true;
 	}
 }
