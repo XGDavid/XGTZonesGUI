@@ -5,5 +5,5 @@ branches:
 projects:
   XGTZonesGUI:
     path: ""
-icon
+    icon: "icon.gif"
 ...
