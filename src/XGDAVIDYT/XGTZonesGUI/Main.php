@@ -7,7 +7,9 @@ namespace XGDAVIDYT\XGTZonesGUI;
 use pocketmine\plugin\PluginBase;
 use pocketmine\command\CommandSender;
 use pocketmine\command\Command;
+use pocketmine\command\ConsoleCommandSender;
 use pocketmine\Player;
+use pocketmine\Server;
 use pocketmine\permission\ServerOperator;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\entity;
@@ -104,6 +106,9 @@ class Main extends PluginBase implements Listener{
 					$menu->getInventory()->setItem(25, $block);
 					$menu->getInventory()->setItem(0, $block);
 					$menu->getInventory()->setItem(26, $block);
+					$menu->readonly();
+					$menu->setName("XGT Zones's");
+					$menu->send($player);
 				}elseif($this->config->get("Type") == 2){
 					$menu->setListener(function(Player $player, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action) : void{
 						if($itemClicked->getId() === ItemIds::GOLDEN_APPLE){
@@ -170,10 +175,10 @@ class Main extends PluginBase implements Listener{
 						$menu->getInventory()->setItem(25, $block);
 						$menu->getInventory()->setItem(0, $block);
 						$menu->getInventory()->setItem(26, $block);
+						$menu->readonly();
+						$menu->setName("XGT Zones's");
+						$menu->send($player);
 					}
-					$menu->readonly();
-					$menu->setName("XGT Zones's");
-					$menu->send($player);
 				}else{
 					$player->sendMessage("[XGTZonesGUI] > Command only In-Game!");
 				}
