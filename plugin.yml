@@ -1,0 +1,10 @@
+---
+name: XGTZonesGUI
+version: 1.0.0-beta
+main: XGDAVIDYT\XGTZonesGUI\Main
+api: 3.12.1
+author: XGDAVIDYT
+commands:
+  zones: 
+    description: Open Zones GUI.
+...
