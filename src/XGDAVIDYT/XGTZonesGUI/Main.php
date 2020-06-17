@@ -40,7 +40,7 @@ class Main extends PluginBase implements Listener{
         $name = $sender->getName();
     	$player = $sender->getServer()->getPlayerExact($name);
         $chest = $this->config->get("Name-Chest");
-		$gapple = $this->config->get("Name-GoldenAplle");
+		$gapple = $this->config->get("Name-GoldenApple");
 		$melon = $this->config->get("Name-Melon");
 		$sword = $this->config->get("Name-Sword");
 		$egg = $this->config->get("Name-Egg");
