@@ -25,7 +25,7 @@ class Main extends PluginBase implements Listener{
 	public function onEnable() : void{
 		$this->saveResource("config.yml");
 		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML);
-		if(!$this->config->get("version") == 1.0.0){
+		if(!$this->config->get("version") == 1.0){
 			$this->getServer()->getLogger()->notice("[XGTZonesGUI] Config is outdata!");
 			$this->getServer()->getPluginManager()->disablePlugin($this);
 		}
