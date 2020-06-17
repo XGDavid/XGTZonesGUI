@@ -11,6 +11,7 @@ use pocketmine\command\ConsoleCommandSender;
 use pocketmine\Player;
 use pocketmine\Server;
 use pocketmine\item\{Item, ItemIds};
+use pocketmine\block\Block;
 use pocketmine\permission\ServerOperator;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\entity;
