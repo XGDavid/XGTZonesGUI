@@ -53,26 +53,26 @@ class Main extends PluginBase implements Listener{
 				$menu = InvMenu::create(InvMenu::TYPE_CHEST);
 				$inventory = $menu->getInventory();
 				if($this->getConfig()->get("Type") == 1){
-					$menu->setListener(function(Player $player, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action) : void{
+					$menu->setListener(function(Player $sender, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action) : void{
 					if($itemClicked->getId() === ItemIds::GOLDEN_APPLE){
-						$player->removeWindow($action->getInventory());
-						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mgapple);
-						$player->teleport(new Vector3($this->getConfig()->get("GAplle-X"), $this->getConfig()->get("GAplle-Y"), $this->getConfig()->get("GAplle-Z")));
+						$sender->removeWindow($action->getInventory());
+						$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mgapple);
+						$sender->teleport(new Vector3($this->getConfig()->get("GAplle-X"), $this->getConfig()->get("GAplle-Y"), $this->getConfig()->get("GAplle-Z")));
 					}
 					if($itemClicked->getId() === ItemIds::CHEST){
-						$player->removeWindow($action->getInventory());
-						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mchest);
-						$player->teleport(new Vector3($this->getConfig()->get("Chest-X"), $this->getConfig()->get("Chest-Y"), $this->getConfig()->get("Chest-Z")));
+						$sender->removeWindow($action->getInventory());
+						$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mchest);
+						$sender->teleport(new Vector3($this->getConfig()->get("Chest-X"), $this->getConfig()->get("Chest-Y"), $this->getConfig()->get("Chest-Z")));
 					}
 					if($itemClicked->getId() === ItemIds::MELON){
-						$player->removeWindow($action->getInventory());
-						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mmelon);
-						$player->teleport(new Vector3($this->getConfig()->get("Melon-X"), $this->getConfig()->get("Melon-Y"), $this->getConfig()->get("Melon-Z")));
+						$sender->removeWindow($action->getInventory());
+						$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mmelon);
+						$sender->teleport(new Vector3($this->getConfig()->get("Melon-X"), $this->getConfig()->get("Melon-Y"), $this->getConfig()->get("Melon-Z")));
 					}
 					if($itemClicked->getId() === ItemIds::DIAMOND_SWORD){
-						$player->removeWindow($action->getInventory());
-						$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$msword);
-						$player->teleport(new Vector3($this->getConfig()->get("DMDSword-X"), $this->getConfig()->get("DMDSword-Y"), $this->getConfig()->get("DMDSword-Z")));
+						$sender->removeWindow($action->getInventory());
+						$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$msword);
+						$sender->teleport(new Vector3($this->getConfig()->get("DMDSword-X"), $this->getConfig()->get("DMDSword-Y"), $this->getConfig()->get("DMDSword-Z")));
 					}
 					});
 					$block = Item::get(Block::IRON_BARS);
@@ -101,41 +101,41 @@ class Main extends PluginBase implements Listener{
 					$menu->getInventory()->setItem(0, $block);
 					$menu->getInventory()->setItem(26, $block);
 				}elseif($this->getConfig()->get("Type") == 2){
-					$menu->setListener(function(Player $player, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action) : void{
+					$menu->setListener(function(Player $sender, Item $itemClicked, Item $itemClickedWith, SlotChangeAction $action) : void{
 						if($itemClicked->getId() === ItemIds::GOLDEN_APPLE){
-							$player->removeWindow($action->getInventory());
-							$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mgapple);
-							$player->teleport(new Vector3($this->getConfig()->get("GAplle-X"), $this->getConfig()->get("GAplle-Y"), $this->getConfig()->get("GAplle-Z")));
+							$sender->removeWindow($action->getInventory());
+							$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mgapple);
+							$sender->teleport(new Vector3($this->getConfig()->get("GAplle-X"), $this->getConfig()->get("GAplle-Y"), $this->getConfig()->get("GAplle-Z")));
 						}
 						if($itemClicked->getId() === ItemIds::CHEST){
-							$player->removeWindow($action->getInventory());
-							$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mchest);
-							$player->teleport(new Vector3($this->getConfig()->get("Chest-X"), $this->getConfig()->get("Chest-Y"), $this->getConfig()->get("Chest-Z")));
+							$sender->removeWindow($action->getInventory());
+							$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mchest);
+							$sender->teleport(new Vector3($this->getConfig()->get("Chest-X"), $this->getConfig()->get("Chest-Y"), $this->getConfig()->get("Chest-Z")));
 						}
 						if($itemClicked->getId() === ItemIds::MELON){
-							$player->removeWindow($action->getInventory());
-							$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mmelon);
-							$player->teleport(new Vector3($this->getConfig()->get("Melon-X"), $this->getConfig()->get("Melon-Y"), $this->getConfig()->get("Melon-Z")));
+							$sender->removeWindow($action->getInventory());
+							$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mmelon);
+							$sender->teleport(new Vector3($this->getConfig()->get("Melon-X"), $this->getConfig()->get("Melon-Y"), $this->getConfig()->get("Melon-Z")));
 						}
 						if($itemClicked->getId() === ItemIds::DIAMOND_SWORD){
-							$player->removeWindow($action->getInventory());
-							$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mgapple);
-							$player->teleport(new Vector3($this->getConfig()->get("DMDSword-X"), $this->getConfig()->get("DMDSword-Y"), $this->getConfig()->get("DMDSword-Z")));
+							$sender->removeWindow($action->getInventory());
+							$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mgapple);
+							$sender->teleport(new Vector3($this->getConfig()->get("DMDSword-X"), $this->getConfig()->get("DMDSword-Y"), $this->getConfig()->get("DMDSword-Z")));
 						}
 						if($itemClicked->getId() === ItemIds::STONE){
-							$player->removeWindow($action->getInventory());
-							$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mstone);
-							$player->teleport(new Vector3($this->getConfig()->get("Stone-X"), $this->getConfig()->get("Stone-Y"), $this->getConfig()->get("Stone-Z")));
+							$sender->removeWindow($action->getInventory());
+							$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$mstone);
+							$sender->teleport(new Vector3($this->getConfig()->get("Stone-X"), $this->getConfig()->get("Stone-Y"), $this->getConfig()->get("Stone-Z")));
 						}
 						if($itemClicked->getId() === ItemIds::EGG){
-							$player->removeWindow($action->getInventory());
-							$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$megg);
-							$player->teleport(new Vector3($this->getConfig()->get("EGG-X"), $this->getConfig()->get("EGG-Y"), $this->getConfig()->get("EGG-Z")));
+							$sender->removeWindow($action->getInventory());
+							$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$megg);
+							$sender->teleport(new Vector3($this->getConfig()->get("EGG-X"), $this->getConfig()->get("EGG-Y"), $this->getConfig()->get("EGG-Z")));
 						}
 						if($itemClicked->getId() === ItemIds::SAND){
-							$player->removeWindow($action->getInventory());
-							$player->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$msand);
-							$player->teleport(new Vector3($this->getConfig()->get("Sand-X"), $this->getConfig()->get("Sand-Y"), $this->getConfig()->get("Sand-Z")));
+							$sender->removeWindow($action->getInventory());
+							$sender->sendMessage("§8[§bXGTZonesGUI§8]§lZonesGUI§8]§l»§r§7 ".$msand);
+							$sender->teleport(new Vector3($this->getConfig()->get("Sand-X"), $this->getConfig()->get("Sand-Y"), $this->getConfig()->get("Sand-Z")));
 						}
 						});
 					$block = Item::get(Block::IRON_BARS)->setCustomName($locked);
@@ -169,7 +169,7 @@ class Main extends PluginBase implements Listener{
 				}
 				$menu->readonly();
 				$menu->setName("XGT Zones's");
-				$menu->send($player);
+				$menu->send($sender);
 			}elseif($sender instanceof Player){
 				$sender->sendMessage("[XGTZonesGUI] > Command only In-Game!");
 			}
