@@ -51,8 +51,7 @@ class Main extends PluginBase implements Listener{
 		$msand = $this->config->get("Message-Sand");
 		$locked = $this->config->get("Name-Locked");
 
-		switch($command->getName()){
-			case "zones":
+		if($command->getName() === "mac"){
 			if($sender instanceof Player){
 			$player->sendMessage("s");
 			$menu = InvMenu::create(InvMenu::TYPE_CHEST);
